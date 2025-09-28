@@ -5,6 +5,7 @@ import Pricing from "@/components/Pricing";
 import About from "@/components/About";
 import ContactForm from "@/components/ContactForm";
 import Newsletter from "@/components/Newsletter";
+import NewsletterStickyBar from "@/components/NewsletterStickyBar";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
         <Newsletter />
       </main>
       <Footer />
+      <NewsletterStickyBar />
     </div>
   );
 }
