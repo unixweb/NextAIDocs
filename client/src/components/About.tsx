@@ -22,17 +22,9 @@ export default function About() {
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto" data-testid="text-description">
-              Joachim Hummel bietet maßgeschneiderte IT-Lösungen für introvertierte Fachkräfte an. Mit jahrelanger Erfahrung in der IT-Beratung verstehe ich die besonderen Herausforderungen stiller Macher und entwickle Lösungen, die zu Ihrer Arbeitsweise passen.
+              Maßgeschneiderte IT-Lösungen für introvertierte Fachkräfte. Mit jahrelanger Erfahrung in der IT-Beratung verstehe ich die besonderen Herausforderungen stiller Macher und entwickle Lösungen, die zu Ihrer Arbeitsweise passen.
             </p>
 
-            <div className="text-center pt-8">
-              <h3 className="text-2xl font-semibold text-foreground mb-2" data-testid="text-name">
-                Joachim Hummel
-              </h3>
-              <p className="text-lg text-muted-foreground mb-8" data-testid="text-title">
-                IT-Berater & Coach
-              </p>
-            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
               <Card data-testid="card-address">
