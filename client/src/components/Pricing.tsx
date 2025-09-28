@@ -71,7 +71,7 @@ export default function Pricing() {
             return (
               <Card 
                 key={index} 
-                className={`relative overflow-hidden hover-elevate transition-all duration-300 ${
+                className={`relative overflow-hidden hover-elevate transition-all duration-300 flex flex-col h-full ${
                   pkg.popular 
                     ? 'border-primary shadow-xl scale-105 ring-2 ring-primary/20' 
                     : `${pkg.borderColor} shadow-lg hover:shadow-xl`
@@ -80,9 +80,9 @@ export default function Pricing() {
               >
                 {pkg.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
-                    <Badge variant="default" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white border-none shadow-lg">
+                    <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold px-3 py-1 rounded-full text-sm shadow-lg">
                       Beliebtestes Paket
-                    </Badge>
+                    </div>
                   </div>
                 )}
                 
@@ -118,36 +118,40 @@ export default function Pricing() {
                   </div>
                 </CardHeader>
 
-                <CardContent className="space-y-6">
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {pkg.description}
-                  </p>
+                <CardContent className="flex flex-col flex-1">
+                  <div className="space-y-6 flex-1">
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {pkg.description}
+                    </p>
 
-                  {pkg.features.length > 0 && (
-                    <div className="space-y-3">
-                      {pkg.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-start gap-3">
-                          <Check className={`h-4 w-4 mt-0.5 flex-shrink-0 text-green-500`} />
-                          <span className="text-sm text-foreground">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
+                    {pkg.features.length > 0 && (
+                      <div className="space-y-3">
+                        {pkg.features.map((feature, featureIndex) => (
+                          <div key={featureIndex} className="flex items-start gap-3">
+                            <Check className={`h-4 w-4 mt-0.5 flex-shrink-0 text-green-500`} />
+                            <span className="text-sm text-foreground">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
 
-                  <Button 
-                    className={`w-full group transition-all duration-300 ${
-                      pkg.popular 
-                        ? `bg-gradient-to-r ${pkg.color} hover:opacity-90 text-white border-none shadow-lg hover:shadow-xl` 
-                        : `bg-gradient-to-r ${pkg.color} text-white border-none shadow-lg hover:shadow-xl hover:scale-105`
-                    }`}
-                    data-testid={`button-package-${index}`}
-                    onClick={() => console.log(`Package ${index} selected`)}
-                  >
-                    <span className="flex items-center justify-center gap-2">
-                      {pkg.buttonText}
-                      <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </span>
-                  </Button>
+                  <div className="pt-6">
+                    <Button 
+                      className={`w-full group transition-all duration-300 ${
+                        pkg.popular 
+                          ? `bg-gradient-to-r ${pkg.color} hover:opacity-90 text-white border-none shadow-lg hover:shadow-xl` 
+                          : `bg-gradient-to-r ${pkg.color} text-white border-none shadow-lg hover:shadow-xl hover:scale-105`
+                      }`}
+                      data-testid={`button-package-${index}`}
+                      onClick={() => console.log(`Package ${index} selected`)}
+                    >
+                      <span className="flex items-center justify-center gap-2">
+                        {pkg.buttonText}
+                        <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      </span>
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             );
