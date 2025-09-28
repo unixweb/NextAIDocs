@@ -66,7 +66,7 @@ export default function Hero() {
           </div>
 
           <div className="flex justify-center lg:justify-end lg:col-span-2">
-            <div className="relative">
+            <div className="relative ml-[10px] mr-[10px]">
               <img
                 src={heroImage}
                 alt="Joachim Hummel - IT-Berater & Coach"
