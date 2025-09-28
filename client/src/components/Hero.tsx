@@ -70,7 +70,7 @@ export default function Hero() {
               <img
                 src={heroImage}
                 alt="Joachim Hummel - IT-Berater & Coach"
-                className="rounded-lg shadow-lg max-w-sm w-full"
+                className="rounded-lg shadow-lg max-w-sm w-full ml-[20px] mr-[20px]"
                 data-testid="img-hero"
               />
             </div>
