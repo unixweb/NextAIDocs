@@ -9,7 +9,7 @@ export default function Hero() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight" data-testid="text-hero-title">
-                Business für IT-Menschen ohne Lautstärke
+                Business für <br />IT-Menschen ohne Lautstärke
               </h1>
               <p className="text-xl text-muted-foreground" data-testid="text-hero-subtitle">
                 Positionierung, Prozesse & persönliche Freiheit für stille Macher
