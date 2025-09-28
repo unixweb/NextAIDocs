@@ -4,12 +4,12 @@ import heroImage from "@assets/joachimhummel6_1759076852974.png";
 export default function Hero() {
   return (
     <section className="bg-gradient-to-br from-background to-muted py-16 lg:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+          <div className="space-y-8 lg:col-span-3">
             <div className="space-y-4">
-              <h1 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight" data-testid="text-hero-title">
-                Business für IT-Menschen <span className="text-primary">ohne Lautstärke</span>
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight" data-testid="text-hero-title">
+                <span className="whitespace-nowrap">Business für IT-Menschen</span> <span className="text-primary">ohne Lautstärke</span>
               </h1>
               <p className="text-xl text-muted-foreground" data-testid="text-hero-subtitle">
                 Positionierung, Prozesse & persönliche Freiheit für stille Macher
@@ -65,7 +65,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="flex justify-center lg:justify-end">
+          <div className="flex justify-center lg:justify-end lg:col-span-2">
             <div className="relative">
               <img
                 src={heroImage}
