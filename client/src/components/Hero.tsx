@@ -25,7 +25,12 @@ export default function Hero() {
                 size="lg" 
                 className="text-base px-8"
                 data-testid="button-get-started"
-                onClick={() => console.log('Get started clicked')}
+                onClick={() => {
+                  const pricingSection = document.getElementById('pakete');
+                  if (pricingSection) {
+                    pricingSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
               >
                 Jetzt starten
               </Button>
@@ -34,7 +39,12 @@ export default function Hero() {
                 size="lg" 
                 className="text-base px-8"
                 data-testid="button-learn-more"
-                onClick={() => console.log('Learn more clicked')}
+                onClick={() => {
+                  const aboutSection = document.getElementById('ueber-mich');
+                  if (aboutSection) {
+                    aboutSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
               >
                 Mehr erfahren
               </Button>
