@@ -4,7 +4,6 @@ import Services from "@/components/Services";
 import Pricing from "@/components/Pricing";
 import About from "@/components/About";
 import ContactForm from "@/components/ContactForm";
-import Newsletter from "@/components/Newsletter";
 import NewsletterStickyBar from "@/components/NewsletterStickyBar";
 import Footer from "@/components/Footer";
 
@@ -18,7 +17,6 @@ export default function Home() {
         <Pricing />
         <About />
         <ContactForm />
-        <Newsletter />
       </main>
       <Footer />
       <NewsletterStickyBar />
