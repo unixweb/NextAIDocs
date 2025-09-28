@@ -97,11 +97,11 @@ export default function Pricing() {
                     </div>
                   </div>
                   
-                  <div className="mb-4">
+                  <div className="mb-6">
                     <p className="text-sm font-medium text-muted-foreground mb-2">
                       {pkg.label}
                     </p>
-                    <CardTitle className="text-xl font-bold mb-4">
+                    <CardTitle className="text-xl font-bold min-h-[3.5rem] flex items-center justify-center">
                       {pkg.title}
                     </CardTitle>
                   </div>
@@ -120,20 +120,22 @@ export default function Pricing() {
 
                 <CardContent className="flex flex-col flex-1">
                   <div className="space-y-6 flex-1">
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <p className="text-sm text-muted-foreground leading-relaxed min-h-[4.5rem] flex items-start">
                       {pkg.description}
                     </p>
 
-                    {pkg.features.length > 0 && (
-                      <div className="space-y-3">
-                        {pkg.features.map((feature, featureIndex) => (
+                    <div className="space-y-3 min-h-[8rem] flex flex-col">
+                      {pkg.features.length > 0 ? (
+                        pkg.features.map((feature, featureIndex) => (
                           <div key={featureIndex} className="flex items-start gap-3">
                             <Check className={`h-4 w-4 mt-0.5 flex-shrink-0 text-green-500`} />
                             <span className="text-sm text-foreground">{feature}</span>
                           </div>
-                        ))}
-                      </div>
-                    )}
+                        ))
+                      ) : (
+                        <div className="flex-1"></div>
+                      )}
+                    </div>
                   </div>
 
                   <div className="pt-6">
