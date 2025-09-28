@@ -66,14 +66,6 @@ export default function Impressum() {
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-2xl font-bold text-foreground mb-4">Berufsbezeichnung und berufsrechtliche Regelungen</h2>
-            <p className="text-foreground leading-relaxed">
-              <strong>Berufsbezeichnung:</strong> IT-Berater & Coach<br />
-              <strong>Verliehen in:</strong> Deutschland
-            </p>
-          </section>
-
-          <section className="space-y-4">
             <h2 className="text-2xl font-bold text-foreground mb-4">Redaktionell verantwortlich</h2>
             <div className="bg-muted/30 rounded-lg p-4 my-4">
               <p className="text-foreground font-medium">
