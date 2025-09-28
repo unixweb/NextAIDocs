@@ -42,7 +42,9 @@ export default function Header() {
               variant="default" 
               size="sm"
               data-testid="button-contact"
-              onClick={() => console.log('Contact clicked')}
+              onClick={() => {
+                document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
               Kontakt
             </Button>
@@ -94,7 +96,7 @@ export default function Header() {
                 className="w-full mt-2"
                 data-testid="button-contact-mobile"
                 onClick={() => {
-                  console.log('Contact clicked');
+                  document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
                   setMobileMenuOpen(false);
                 }}
               >
