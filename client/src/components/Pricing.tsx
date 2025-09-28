@@ -65,7 +65,7 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12 lg:items-stretch">
           {packages.map((pkg, index) => {
             const IconComponent = pkg.icon;
             return (
@@ -73,7 +73,7 @@ export default function Pricing() {
                 key={index} 
                 className={`relative overflow-hidden hover-elevate transition-all duration-300 flex flex-col h-full ${
                   pkg.popular 
-                    ? 'border-primary shadow-xl scale-105 ring-2 ring-primary/20' 
+                    ? 'border-primary shadow-xl ring-2 ring-primary/20' 
                     : `${pkg.borderColor} shadow-lg hover:shadow-xl`
                 }`}
                 data-testid={`card-package-${index}`}
