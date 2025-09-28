@@ -115,7 +115,10 @@ export default function ContactForm() {
                     name="lastName"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Nachname *</FormLabel>
+                        <FormLabel className="flex items-center gap-2">
+                          <User className="h-4 w-4" />
+                          Nachname *
+                        </FormLabel>
                         <FormControl>
                           <Input 
                             placeholder="Ihr Nachname" 
