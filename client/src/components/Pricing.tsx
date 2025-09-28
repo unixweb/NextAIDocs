@@ -69,22 +69,22 @@ export default function Pricing() {
           {packages.map((pkg, index) => {
             const IconComponent = pkg.icon;
             return (
-              <Card 
-                key={index} 
-                className={`relative overflow-hidden hover-elevate transition-all duration-300 flex flex-col h-full ${
-                  pkg.popular 
-                    ? 'border-primary shadow-xl ring-2 ring-primary/20' 
-                    : `${pkg.borderColor} shadow-lg hover:shadow-xl`
-                }`}
-                data-testid={`card-package-${index}`}
-              >
+              <div key={index} className="relative">
                 {pkg.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
-                    <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold px-3 py-1 rounded-full text-sm shadow-lg">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-20">
+                    <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold px-3 py-1 rounded-full text-sm shadow-lg whitespace-nowrap">
                       Beliebtestes Paket
                     </div>
                   </div>
                 )}
+                <Card 
+                  className={`overflow-hidden hover-elevate transition-all duration-300 flex flex-col h-full ${
+                    pkg.popular 
+                      ? 'border-primary shadow-xl ring-2 ring-primary/20' 
+                      : `${pkg.borderColor} shadow-lg hover:shadow-xl`
+                  }`}
+                  data-testid={`card-package-${index}`}
+                >
                 
                 {/* Gradient Background */}
                 <div className={`absolute top-0 left-0 right-0 h-24 bg-gradient-to-r ${pkg.color} opacity-10`} />
@@ -153,7 +153,8 @@ export default function Pricing() {
                     </Button>
                   </div>
                 </CardContent>
-              </Card>
+                </Card>
+              </div>
             );
           })}
         </div>
