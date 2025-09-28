@@ -8,7 +8,7 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
           <div className="space-y-8 lg:col-span-3">
             <div className="space-y-4">
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold lg:font-bold leading-snug tracking-tight text-foreground whitespace-normal lg:whitespace-nowrap" data-testid="text-hero-title">
+              <h1 className="sm:text-3xl lg:text-4xl font-semibold lg:font-bold tracking-tight text-foreground whitespace-normal lg:whitespace-nowrap text-[30px]" data-testid="text-hero-title">
                 Business für IT-Menschen <span className="text-primary ml-[0px] mr-[0px] mt-[0px] mb-[0px] pl-[10px] pr-[10px] pt-[10px] pb-[10px]">ohne  Lautstärke</span>
               </h1>
               <p className="text-xl text-muted-foreground" data-testid="text-hero-subtitle">
