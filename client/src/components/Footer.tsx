@@ -1,3 +1,5 @@
+import { Link } from "wouter";
+
 export default function Footer() {
   return (
     <footer className="bg-muted py-8">
@@ -17,20 +19,20 @@ export default function Footer() {
               © 2024 Next8AI. Alle Rechte vorbehalten.
             </span>
             <div className="flex gap-4">
-              <a 
-                href="#datenschutz" 
+              <Link 
+                href="/datenschutz"
                 className="hover:text-foreground transition-colors"
                 data-testid="link-privacy"
               >
                 Datenschutz
-              </a>
-              <a 
-                href="#impressum" 
+              </Link>
+              <Link 
+                href="/impressum"
                 className="hover:text-foreground transition-colors"
                 data-testid="link-imprint"
               >
                 Impressum
-              </a>
+              </Link>
             </div>
           </div>
         </div>
