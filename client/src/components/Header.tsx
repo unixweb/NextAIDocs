@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import logoImage from "@assets/Generated Image September 30, 2025 - 4_14PM_1759241785959.png";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -11,6 +10,9 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
+            <h1 className="text-xl font-bold text-primary" data-testid="text-logo">
+              Next8AI
+            </h1>
           </div>
 
           {/* Desktop Navigation */}
