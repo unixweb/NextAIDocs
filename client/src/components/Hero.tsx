@@ -6,8 +6,8 @@ export default function Hero() {
   return (
     <section className="relative bg-gradient-to-br from-[#0a1929] to-[#1a2942] py-16 lg:py-24 overflow-hidden">
       <div className="relative z-10 max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center lg:items-start">
-          <div className="space-y-6 lg:col-span-3">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center lg:items-start">
+          <div className="space-y-6 lg:col-span-2">
             <div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight" data-testid="text-hero-title">
                 <span className="block">Business für IT-Menschen</span>
@@ -82,7 +82,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="flex justify-center lg:justify-end lg:col-span-2 relative">
+          <div className="flex justify-center lg:justify-end lg:col-span-3 relative">
             <div className="relative w-full max-w-lg lg:max-w-none">
               <img
                 src={heroImage}
