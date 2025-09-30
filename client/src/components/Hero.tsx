@@ -11,7 +11,7 @@ export default function Hero() {
             <div className="space-y-4">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight" data-testid="text-hero-title">
                 Business für IT-Menschen<br />
-                ohne <span className="text-blue-400">Lautstärke</span>
+                ohne <span className="text-primary">Lautstärke</span>
               </h1>
               <p className="text-lg sm:text-xl text-gray-300" data-testid="text-hero-subtitle">
                 Klarheit, Struktur und Freiheit – für IT-Profis,<br />

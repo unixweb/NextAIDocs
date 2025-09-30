@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { X, Mail, Check } from "lucide-react";
@@ -9,6 +9,38 @@ export default function NewsletterStickyBar() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
   const { toast } = useToast();
+  const lastMouseYRef = useRef<number>(0);
+
+  // Auto-hide 5 seconds after becoming visible
+  useEffect(() => {
+    if (isVisible) {
+      const timer = setTimeout(() => {
+        setIsVisible(false);
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [isVisible]);
+
+  // Show bar when mouse moves down
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const currentY = e.clientY;
+      
+      // Check if mouse moved down (y-position increased)
+      if (currentY > lastMouseYRef.current && !isVisible) {
+        setIsVisible(true);
+      }
+      
+      lastMouseYRef.current = currentY;
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, [isVisible]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(); // Prevent redirect
@@ -63,7 +95,7 @@ export default function NewsletterStickyBar() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-primary text-primary-foreground shadow-lg z-50 border-t border-primary-border">
+    <div className="fixed bottom-0 left-0 right-0 bg-primary text-primary-foreground shadow-lg z-50 border-t border-primary-border" data-testid="newsletter-sticky-bar">
       <div className="max-w-7xl mx-auto px-4 py-3">
         <div className="flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
