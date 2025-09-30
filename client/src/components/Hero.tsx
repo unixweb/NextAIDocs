@@ -5,9 +5,6 @@ import heroImage from "@assets/joachimhummel6_1759076852974.png";
 export default function Hero() {
   return (
     <section className="relative bg-gradient-to-br from-[#0a1929] to-[#1a2942] py-16 lg:py-24 overflow-hidden">
-      {/* Diagonales Design-Element */}
-      <div className="absolute top-0 right-0 w-2/5 h-full bg-gradient-to-br from-gray-200 to-gray-300 transform origin-top-right skew-x-[-15deg] translate-x-[30%] z-0" />
-      
       <div className="relative z-10 max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
           <div className="space-y-6 lg:col-span-3">
@@ -85,12 +82,15 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="flex justify-center lg:justify-end lg:col-span-2 relative z-20">
-            <div className="relative">
+          <div className="flex justify-center lg:justify-end lg:col-span-2 relative">
+            <div className="relative w-full max-w-lg lg:max-w-none">
               <img
                 src={heroImage}
                 alt="Joachim Hummel - IT-Berater & Coach"
-                className="rounded-lg shadow-2xl max-w-sm w-full"
+                className="w-full h-auto shadow-2xl"
+                style={{
+                  clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0% 100%)'
+                }}
                 data-testid="img-hero"
               />
             </div>
