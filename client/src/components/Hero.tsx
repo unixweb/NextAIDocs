@@ -6,18 +6,18 @@ export default function Hero() {
   return (
     <section className="relative bg-gradient-to-br from-[#0a1929] to-[#1a2942] py-16 lg:py-24 overflow-hidden">
       <div className="relative z-10 max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center lg:items-start">
           <div className="space-y-6 lg:col-span-3">
-            <div className="space-y-4">
+            <div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight" data-testid="text-hero-title">
-                Business für IT-Menschen<br />
-                ohne <span className="text-primary">Lautstärke</span>
+                <span className="block">Business für IT-Menschen</span>
+                <span className="block mt-6">ohne <span className="text-primary">Lautstärke</span></span>
               </h1>
-              <p className="text-lg sm:text-xl text-gray-300" data-testid="text-hero-subtitle">
+              <p className="text-lg sm:text-xl text-gray-300 mt-6" data-testid="text-hero-subtitle">
                 Klarheit, Struktur und Freiheit – für IT-Profis,<br />
                 die nicht schreien müssen, um gehört zu werden
               </p>
-              <p className="text-base sm:text-lg text-gray-400" data-testid="text-hero-description">
+              <p className="text-base sm:text-lg text-gray-400 mt-4" data-testid="text-hero-description">
                 Weil nachhaltiger IT-Erfolg nicht von Marketing-Lautstärke<br />
                 abhängt, sondern von klugen Systemen.
               </p>
