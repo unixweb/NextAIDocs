@@ -53,10 +53,6 @@ export default function Hero() {
               </Button>
             </div>
 
-            <p className="text-sm text-gray-400" data-testid="text-hero-footer">
-              Kostenlos & unverbindlich testen
-            </p>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8">
               <div className="flex items-start gap-3" data-testid="card-partnership">
                 <Handshake className="w-6 h-6 text-white mt-1 flex-shrink-0" />
