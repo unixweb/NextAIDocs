@@ -11,7 +11,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <h1 className="text-xl font-bold text-primary" data-testid="text-logo">
-              Next8AI
+              NEXT8AI
             </h1>
           </div>
 
